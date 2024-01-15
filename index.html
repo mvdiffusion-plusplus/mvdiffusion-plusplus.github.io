@@ -13,7 +13,17 @@
     <link rel="stylesheet" type="text/css" href="css/project.css" media="screen" />
     <link rel="stylesheet" type="text/css" media="screen" href="css/iconize.css" />
     <script src="js/google-code-prettify/prettify.js"></script> -->
-
+  <style>
+    .centered-container {
+      display: flex;
+      justify-content: center;
+      /* Centers horizontally */
+      align-items: center;
+      /* Centers vertically */
+      height: 100vh;
+      /* Full viewport height */
+    }
+  </style>
 </head>
 
 <!-- cover -->
@@ -74,33 +84,38 @@
         <hr style="margin-top:0px">
         <h6 style="color:#8899a5"> MVDiffusion++ is able to generate dense, high-resolution images conditioned on a
           single or multiple unposed images</h6>
+        <div class="centered-container">
+          <img src="gif/2.gif" alt="Description of GIF" style="width: 1200px; height: 400px;">
+          <img src="gif/3.gif" alt="Description of GIF" style="width: 1200px; height: 400px;">
+          <img src="gif/4.gif" alt="Description of GIF" style="width: 1200px; height: 400px;">
+          <img src="gif/4.gif" alt="Description of GIF" style="width: 1200px; height: 400px;">
+        </div>
 
-        <img src="gif/2.gif" alt="Description of GIF" style="width: 1200px; height: 400px;">
-
-        <br>
-
-        <p class="text-left">
-          In this paper, we present a novel diffusion model called SyncDreamer that generates multiview-consistent
-          images from a single-view image. Using pretrained large-scale 2D diffusion models, recent work Zero123
-          demonstrates the ability to generate plausible novel views from a single-view image of an object. However,
-          maintaining consistency in geometry and colors for the generated images remains a challenge. To address this
-          issue, we propose a synchronized multiview diffusion model that models the joint probability distribution of
-          multiview images, enabling the generation of multiview-consistent images in a single reverse process.
-          SyncDreamer synchronizes the intermediate states of all the generated images at every step of the reverse
-          process through a 3D-aware feature attention mechanism that correlates the corresponding features across
-          different views. Experiments show that SyncDreamer generates images with high consistency across different
-          views, thus making it well-suited for various 3D generation tasks such as novel-view-synthesis, text-to-3D,
-          and image-to-3D.
-        </p>
-
-
-        <img src="gif/2.gif" alt="Description of GIF">
-
-        <p class="text-center">
-          Reverse process of SyncDreamer's multiview diffusion.
-        </p>
       </div>
+      <br>
+
+      <p class="text-left">
+        In this paper, we present a novel diffusion model called SyncDreamer that generates multiview-consistent
+        images from a single-view image. Using pretrained large-scale 2D diffusion models, recent work Zero123
+        demonstrates the ability to generate plausible novel views from a single-view image of an object. However,
+        maintaining consistency in geometry and colors for the generated images remains a challenge. To address this
+        issue, we propose a synchronized multiview diffusion model that models the joint probability distribution of
+        multiview images, enabling the generation of multiview-consistent images in a single reverse process.
+        SyncDreamer synchronizes the intermediate states of all the generated images at every step of the reverse
+        process through a 3D-aware feature attention mechanism that correlates the corresponding features across
+        different views. Experiments show that SyncDreamer generates images with high consistency across different
+        views, thus making it well-suited for various 3D generation tasks such as novel-view-synthesis, text-to-3D,
+        and image-to-3D.
+      </p>
+
+
+      <img src="gif/2.gif" alt="Description of GIF">
+
+      <p class="text-center">
+        Reverse process of SyncDreamer's multiview diffusion.
+      </p>
     </div>
+  </div>
   </div>
 </section>
 <br>
