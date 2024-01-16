@@ -5,7 +5,8 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>SyncDreamer: Generating Multiview-consistent Images from a Single-view Image</title>
+  <title>MVDiffusion++: A Dense High-resolution Multi-view Diffusion Model for Single to Sparse-view 3D Object
+    Reconstruction</title>
   <!-- Bootstrap -->
   <link href="css/bootstrap-4.4.1.css" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -20,8 +21,26 @@
       /* Centers horizontally */
       align-items: center;
       /* Centers vertically */
-      height: 100vh;
       /* Full viewport height */
+    }
+  </style>
+  <style>
+    .margin-input {
+      margin-right: 300px;
+      margin-left: 150px;
+      /* Adjust the value as needed */
+    }
+  </style>
+  <style>
+    .margin-gen {
+      margin-right: 250px;
+      /* Adjust the value as needed */
+    }
+  </style>
+  <style>
+    .margin-mesh {
+      margin-right: 0px;
+      /* Adjust the value as needed */
     }
   </style>
 </head>
@@ -80,41 +99,54 @@
   <div class="container">
     <div class="row">
       <div class="col-12 text-center">
-        <h3>Abstract</h3>
+
         <hr style="margin-top:0px">
         <h6 style="color:#8899a5"> MVDiffusion++ is able to generate dense, high-resolution images conditioned on a
           single or multiple unposed images</h6>
+        <table>
+          <tr>
+            <td>
+              <div class="margin-input">Input</div>
+            </td>
+            <td>
+              <div class="margin-gen">Multi-view generation</div>
+            </td>
+            <td>
+              <div class="margin-mesh">Textured mesh</div>
+            </td>
+          </tr>
+        </table>
+
         <div class="centered-container">
           <img src="gif/2.gif" alt="Description of GIF" style="width: 1200px; height: 400px;">
+        </div>
+        <div class="centered-container">
           <img src="gif/3.gif" alt="Description of GIF" style="width: 1200px; height: 400px;">
-          <img src="gif/4.gif" alt="Description of GIF" style="width: 1200px; height: 400px;">
+        </div>
+        <div class="centered-container">
           <img src="gif/4.gif" alt="Description of GIF" style="width: 1200px; height: 400px;">
         </div>
-
       </div>
-      <br>
-
-      <p class="text-left">
-        In this paper, we present a novel diffusion model called SyncDreamer that generates multiview-consistent
-        images from a single-view image. Using pretrained large-scale 2D diffusion models, recent work Zero123
-        demonstrates the ability to generate plausible novel views from a single-view image of an object. However,
-        maintaining consistency in geometry and colors for the generated images remains a challenge. To address this
-        issue, we propose a synchronized multiview diffusion model that models the joint probability distribution of
-        multiview images, enabling the generation of multiview-consistent images in a single reverse process.
-        SyncDreamer synchronizes the intermediate states of all the generated images at every step of the reverse
-        process through a 3D-aware feature attention mechanism that correlates the corresponding features across
-        different views. Experiments show that SyncDreamer generates images with high consistency across different
-        views, thus making it well-suited for various 3D generation tasks such as novel-view-synthesis, text-to-3D,
-        and image-to-3D.
-      </p>
-
-
-      <img src="gif/2.gif" alt="Description of GIF">
-
-      <p class="text-center">
-        Reverse process of SyncDreamer's multiview diffusion.
-      </p>
+      <div class="col-sm-4 my-auto center" style="margin-left:auto; margin-right: auto;">
+        <a href="./gallery_0.html" class="btn btn-primary btn-lg btn-search">
+          Additional Examples
+        </a>
+      </div>
     </div>
+
+
+    <h3>Abstract</h3>
+    <p class="text-left">
+      This paper presents a neural architecture {\ourmethod}~for sparse-view 3D object reconstruction that synthesizes
+      dense and high-resolution views of an object given one or a few images without camera poses as a condition. Two
+      simple ideas are at the heart of \ourmethod: 1) A ``pose-free architecture'' where standard self-attention among
+      2D latent features learns 3D consistency across conditional and generation views without explicitly using camera
+      pose information; and 2) A view-level uniform dropout that drops a consistent set of views across layers, enabling
+      us to reduce the training-time memory footprint and achieve dense and high-resolution view synthesis. We use
+      Objaverse dataset for training and Google scanned object dataset for evaluation with standard novel view synthesis
+      and 3D reconstruction metrics, where \ourmethod makes a significant boost over the current state-of-the-art.
+    </p>
+  </div>
   </div>
   </div>
 </section>
