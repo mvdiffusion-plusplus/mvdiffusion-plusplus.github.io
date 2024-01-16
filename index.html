@@ -24,7 +24,7 @@
       /* Full viewport height */
     }
   </style>
-  <style>
+  <!-- <style>
     .margin-input {
       margin-right: 300px;
       margin-left: 150px;
@@ -42,7 +42,7 @@
       margin-right: 0px;
       /* Adjust the value as needed */
     }
-  </style>
+  </style> -->
 </head>
 
 <!-- cover -->
@@ -103,19 +103,16 @@
         <hr style="margin-top:0px">
         <h6 style="color:#8899a5"> MVDiffusion++ is able to generate dense, high-resolution images conditioned on a
           single or multiple unposed images</h6>
-        <table width="90%">
-          <tr>
-            <td width="30%">
-              <div class="margin-input"> <b>Input image</b> </div>
-            </td>
-            <td width="30%">
-              <div class="margin-gen"> <b>Generated images</b> </div>
-            </td>
-            <td width="30%">
-              <div class="margin-mesh"><b>Textured mesh</b></div>
-            </td>
-          </tr>
-        </table>
+
+        <div class="centered-container">
+          <table width="90%">
+            <tr>
+              <td><b>Input image</b> </td>
+              <td><b>Generated images</b></td>
+              <td><b>Textured mesh</b></td>
+            </tr>
+          </table>
+        </div>
 
         <div class="centered-container">
           <img src="gif/2.gif" alt="Description of GIF" width="90%">
@@ -264,8 +261,10 @@
   </div>
 </div>
 
+
+
 <footer class="text-center" style="margin-bottom:10px">
-  Thanks to <a href="https://lioryariv.github.io/" target="_blank">Lior Yariv</a> for the website template.
+  Thanks to <a href="https://liuyuan-pal.github.io/SyncDreamer/" target="_blank">SyncDreamer</a> for the website template.
 </footer>
 
 </body>
