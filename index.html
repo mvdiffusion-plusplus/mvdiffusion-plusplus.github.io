@@ -106,10 +106,10 @@
         <table>
           <tr>
             <td>
-              <div class="margin-input">Input</div>
+              <div class="margin-input">Input image</div>
             </td>
             <td>
-              <div class="margin-gen">Multi-view generation</div>
+              <div class="margin-gen">Geneerated images</div>
             </td>
             <td>
               <div class="margin-mesh">Textured mesh</div>
@@ -118,13 +118,13 @@
         </table>
 
         <div class="centered-container">
-          <img src="gif/2.gif" alt="Description of GIF" style="width: 1200px; height: 400px;">
+          <img src="gif/2.gif" alt="Description of GIF" width="90%">
         </div>
         <div class="centered-container">
-          <img src="gif/3.gif" alt="Description of GIF" style="width: 1200px; height: 400px;">
+          <img src="gif/3.gif" alt="Description of GIF" width="90%">
         </div>
         <div class="centered-container">
-          <img src="gif/4.gif" alt="Description of GIF" style="width: 1200px; height: 400px;">
+          <img src="gif/4.gif" alt="Description of GIF" width="90%">
         </div>
       </div>
       <div class="col-sm-4 my-auto center" style="margin-left:auto; margin-right: auto;">
@@ -137,14 +137,7 @@
 
     <h3>Abstract</h3>
     <p class="text-left">
-      This paper presents a neural architecture {\ourmethod}~for sparse-view 3D object reconstruction that synthesizes
-      dense and high-resolution views of an object given one or a few images without camera poses as a condition. Two
-      simple ideas are at the heart of \ourmethod: 1) A ``pose-free architecture'' where standard self-attention among
-      2D latent features learns 3D consistency across conditional and generation views without explicitly using camera
-      pose information; and 2) A view-level uniform dropout that drops a consistent set of views across layers, enabling
-      us to reduce the training-time memory footprint and achieve dense and high-resolution view synthesis. We use
-      Objaverse dataset for training and Google scanned object dataset for evaluation with standard novel view synthesis
-      and 3D reconstruction metrics, where \ourmethod makes a significant boost over the current state-of-the-art.
+      This paper presents a neural architecture MVDiffusion++ for sparse-view 3D object reconstruction that synthesizes dense and high-resolution views of an object given one or a few images without camera poses as a condition. Two simple ideas are at the heart of MVDiffusion++: 1) A "pose-free architecture" where standard self-attention among 2D latent features learns 3D consistency across conditional and generation views without explicitly using camera pose information; and 2) A view-level uniform dropout that drops a consistent set of views across layers, enabling us to reduce the training-time memory footprint and achieve dense and high-resolution view synthesis. We use Objaverse dataset for training and Google scanned object dataset for evaluation with standard novel view synthesis and 3D reconstruction metrics, where MVDiffusion++ makes a significant boost over the current state-of-the-art.
     </p>
   </div>
   </div>
