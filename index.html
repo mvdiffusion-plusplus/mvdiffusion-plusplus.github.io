@@ -101,7 +101,9 @@
       <div class="col-12 text-center">
 
         <hr style="margin-top:0px">
-        <h6 style="color:#8899a5"> MVDiffusion++ is able to generate <span style='color: #e04c1f;'>dense</span>, <span style='color: #e04c1f;'>high-resolution</span> images conditioned on <span style='color: #1f46e0;'>single or multiple unposed</span> images</h6>
+        <h6 style="color:#8899a5"> MVDiffusion++ is able to generate <span style='color: #e04c1f;'>dense</span>, <span
+            style='color: #e04c1f;'>high-resolution</span> images conditioned on <span style='color: #1f46e0;'>single or
+            multiple unposed</span> images</h6>
 
         <div class="centered-container">
           <table width="90%">
@@ -128,7 +130,14 @@
 
     <h3>Abstract</h3>
     <p class="text-left">
-      This paper presents a neural architecture MVDiffusion++ for sparse-view 3D object reconstruction that synthesizes dense and high-resolution views of an object given one or a few images without camera poses as a condition. Two simple ideas are at the heart of MVDiffusion++: 1) A "pose-free architecture" where standard self-attention among 2D latent features learns 3D consistency across conditional and generation views without explicitly using camera pose information; and 2) A view-level uniform dropout that drops a consistent set of views across layers, enabling us to reduce the training-time memory footprint and achieve dense and high-resolution view synthesis. We use Objaverse dataset for training and Google scanned object dataset for evaluation with standard novel view synthesis and 3D reconstruction metrics, where MVDiffusion++ makes a significant boost over the current state-of-the-art.
+      This paper presents a neural architecture MVDiffusion++ for sparse-view 3D object reconstruction that synthesizes
+      dense and high-resolution views of an object given one or a few images without camera poses as a condition. Two
+      simple ideas are at the heart of MVDiffusion++: 1) A "pose-free architecture" where standard self-attention among
+      2D latent features learns 3D consistency across conditional and generation views without explicitly using camera
+      pose information; and 2) A view-level uniform dropout that drops a consistent set of views across layers, enabling
+      us to reduce the training-time memory footprint and achieve dense and high-resolution view synthesis. We use
+      Objaverse dataset for training and Google scanned object dataset for evaluation with standard novel view synthesis
+      and 3D reconstruction metrics, where MVDiffusion++ makes a significant boost over the current state-of-the-art.
     </p>
   </div>
   </div>
@@ -178,104 +187,6 @@
 
 
 
-<section>
-  <div class="container">
-    <div class="row">
-      <div class="col-12 text-center">
-        <h2>Results on the Google Scanned Object dataset</h2>
-        <hr style="margin-top:0px">
-        <video width="80%" playsinline="" autoplay="autoplay" loop="loop" preload="" muted="">
-          <source src="video/gso.mp4" type="video/mp4">
-        </video>
-        <p class="text-left">
-
-        </p>
-      </div>
-    </div>
-  </div>
-</section>
-<br>
-
-<section>
-  <div class="container">
-    <div class="row">
-      <div class="col-12 text-center">
-        <h2>Text to image to 3D model</h2>
-        <hr style="margin-top:0px">
-        <video width="80%" playsinline="" autoplay="autoplay" loop="loop" preload="" muted="">
-          <source src="video/t2i.mp4" type="video/mp4">
-        </video>
-
-        <p class="text-left">
-
-        </p>
-      </div>
-    </div>
-  </div>
-</section>
-<br>
-
-<section>
-  <div class="container">
-    <div class="row">
-      <div class="col-12 text-center">
-        <h2>2D design to 3D model</h2>
-        <hr style="margin-top:0px">
-        <video width="80%" playsinline="" autoplay="autoplay" loop="loop" preload="" muted="">
-          <source src="video/drawings.mp4" type="video/mp4">
-        </video>
-
-        <p class="text-center">
-          SyncDreamer enables generating 3D models from 2D designs and hand drawings including skectches, Chinese ink
-          paintings, oil paintings and so on.
-        </p>
-      </div>
-    </div>
-  </div>
-</section>
-<br>
-
-
-<section>
-  <div class="container">
-    <div class="row">
-      <div class="col-12 text-center">
-        <h2>Multiple instance generation</h2>
-        <hr style="margin-top:0px">
-        <video width="80%" playsinline="" autoplay="autoplay" loop="loop" preload="" muted="">
-          <source src="video/multiple.mp4" type="video/mp4">
-        </video>
-
-        <p class="text-center">
-          Given the same single-view image, SynDreame allows generating different instances using different random
-          seeds.
-        </p>
-      </div>
-    </div>
-  </div>
-</section>
-<br>
-
-
-<section>
-  <div class="container">
-    <div class="row">
-      <div class="col-12 text-center">
-        <h2>More results</h2>
-        <hr style="margin-top:0px">
-        <video width="80%" playsinline="" autoplay="autoplay" loop="loop" preload="" muted="">
-          <source src="video/more_results.mp4" type="video/mp4">
-        </video>
-
-        <p class="text-center">
-          Test images are downloaded from the Internet and some of them are from <a
-            href="https://wiki.biligame.com/ys/%E9%A6%96%E9%A1%B5" target="_blank">Genshin Impact Wiki</a>.
-        </p>
-      </div>
-    </div>
-  </div>
-</section>
-<br>
 
 
 <!-- citing -->
@@ -300,7 +211,8 @@
 
 
 <footer class="text-center" style="margin-bottom:10px">
-  Thanks to <a href="https://liuyuan-pal.github.io/SyncDreamer/" target="_blank">SyncDreamer</a> for the website template.
+  Thanks to <a href="https://liuyuan-pal.github.io/SyncDreamer/" target="_blank">SyncDreamer</a> for the website
+  template.
 </footer>
 
 </body>
