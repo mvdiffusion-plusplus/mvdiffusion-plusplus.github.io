@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>SyncDreamer: Generating Multiview-consistent Images from a Single-view Image</title>
+    <!-- Bootstrap -->
+    <link href="css/bootstrap-4.4.1.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- <link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,800italic,400,700,800' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="css/project.css" media="screen" />
+    <link rel="stylesheet" type="text/css" media="screen" href="css/iconize.css" />
+    <script src="js/google-code-prettify/prettify.js"></script> -->
+    <style>
+        .centered-container {
+            display: flex;
+            justify-content: center;
+            /* Centers horizontally */
+            align-items: center;
+            /* Centers vertically */
+            /* Full viewport height */
+        }
+    </style>
+    <style>
+        .centered-container {
+            display: flex;
+            justify-content: center;
+            /* Centers horizontally */
+            align-items: center;
+            /* Centers vertically */
+            /* Full viewport height */
+        }
+    </style>
+    <style>
+        .margin-input {
+            margin-right: 300px;
+            margin-left: 150px;
+            /* Adjust the value as needed */
+        }
+    </style>
+    <style>
+        .margin-gen {
+            margin-right: 250px;
+            /* Adjust the value as needed */
+        }
+    </style>
+    <style>
+        .margin-mesh {
+            margin-right: 0px;
+            /* Adjust the value as needed */
+        }
+    </style>
+</head>
+
+<!-- cover -->
+<section>
+    <div class="jumbotron text-center mt-0">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <h2>MVDiffusion++: A Dense High-resolution Multi-view Diffusion Model for Single to Sparse-view 3D
+                        Object
+                        Reconstruction
+                    </h2>
+                    <h4 style="color:#5a6268;">Arxiv 2024 </h4>
+                    <hr>
+                    <h6>
+                        <a href="https://tangshitao.github.io/" target="_blank">Shitao Tang</a><sup>1</sup>,
+                        <a href="https://jcchen.me/" target="_blank">Jiacheng Chen</a><sup>1</sup>,
+                        <a href="https://wdilin.github.io/" target="_blank">Dilin Wang</a><sup>2</sup>,
+                        <a href="https://frobelbest.github.io/" target="_blank">Chengzhou Tang</a><sup>2</sup>,
+                        <a href="https://zhangfuyang.github.io/" target="_blank">Fuyang Zhang</a><sup>1</sup>,
+                        <a href="https://ychfan.github.io/" target="_blank">Yuchen Fan</a><sup>2</sup>,
+                        <a href="https://www.linkedin.com/in/vchandra/" target="_blank">Vikas Chandra</a><sup>2</sup>
+                        <a href="https://www.linkedin.com/in/rakesh-r-3848538/" target="_blank">Rakesh
+                            Ranjan</a><sup>2</sup>
+                        <a href="https://yasu-furukawa.github.io/" target="_blank">Yasutaka
+                            Furukawa</a><sup>1</sup>
+                    </h6>
+                    <p>
+                        <sup>1</sup>Simon Fraser University &nbsp;&nbsp;
+                        <sup>2</sup>Meta Reality Labs&nbsp;&nbsp;&nbsp;&nbsp;
+                    </p>
+
+                    <div class="row justify-content-center">
+                        <div class="column">
+                            <p class="mb-5"><a class="btn btn-large btn-light" href="" role="button" target="_blank">
+                                    <i class="fa fa-file"></i> Paper</a> </p>
+                        </div>
+                        <div class="column">
+                            <p class="mb-5"><a class="btn btn-large btn-light" href="" role="button" target="_blank">
+                                    <i class="fa fa-github-alt"></i> Code </a> </p>
+                        </div>
+                        <div class="column">
+                            <p class="mb-5"><a class="btn btn-large btn-light" href="" role="button" target="_blank">
+                                    <i class="fa fa-desktop"></i> Live Demo </a> </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!-- abstract -->
+<section>
+    <div class="container">
+        <div class="row">
+            <div class="col-12 text-center">
+
+                <hr style="margin-top:0px">
+                <h6 style="color:#8899a5"> MVDiffusion++ is able to generate dense, high-resolution images conditioned
+                    on a
+                    single or multiple unposed images</h6>
+                <table>
+                    <tr>
+                        <td>
+                            <div class="margin-input">Input</div>
+                        </td>
+                        <td>
+                            <div class="margin-gen">Multi-view generation</div>
+                        </td>
+                        <td>
+                            <div class="margin-mesh">Textured mesh</div>
+                        </td>
+                    </tr>
+                </table>
+                <div class="centered-container" style="margin-right: 15px;">
+                    <img src="gso_gif/11_1.gif" alt="Description of GIF" style="margin: 30px;" width="30%">
+                    <img src="gso_gif/11_2.gif" alt="Description of GIF" style="margin: 30px;" width="30%">
+                    <img src="gso_gif/11_4.gif" alt="Description of GIF" style="margin: 30px;" width="30%">
+                </div>
+                <div class="centered-container"
+                    style="margin-right: 15px;  border-bottom: 2px solid #000; padding-bottom: 10px;">
+                    <img src="gso_gif/11.png" alt="Description of GIF" width="50%">
+                </div>
+
+                <div class="centered-container" style="margin-right: 15px;">
+                    <img src="gso_gif/12_1.gif" alt="Description of GIF" style="margin: 30px;" width="30%">
+                    <img src="gso_gif/12_2.gif" alt="Description of GIF" style="margin: 30px;" width="30%">
+                    <img src="gso_gif/12_4.gif" alt="Description of GIF" style="margin: 30px;" width="30%">
+                </div>
+                <div class="centered-container"
+                    style="margin-right: 15px;  border-bottom: 2px solid #000; padding-bottom: 10px;">
+                    <img src="gso_gif/12.png" alt="Description of GIF" width="50%">
+                </div>
+
+                <div class="centered-container" style="margin-right: 15px;">
+                    <img src="gso_gif/13_1.gif" alt="Description of GIF" style="margin: 30px;" width="30%">
+                    <img src="gso_gif/13_2.gif" alt="Description of GIF" style="margin: 30px;" width="30%">
+                    <img src="gso_gif/13_4.gif" alt="Description of GIF" style="margin: 30px;" width="30%">
+                </div>
+                <div class="centered-container"
+                    style="margin-right: 15px;  border-bottom: 2px solid #000; padding-bottom: 10px;">
+                    <img src="gso_gif/13.png" alt="Description of GIF" width="50%">
+                </div>
+
+                <div class="centered-container" style="margin-right: 15px;">
+                    <img src="gso_gif/14_1.gif" alt="Description of GIF" style="margin: 30px;" width="30%">
+                    <img src="gso_gif/14_2.gif" alt="Description of GIF" style="margin: 30px;" width="30%">
+                    <img src="gso_gif/14_4.gif" alt="Description of GIF" style="margin: 30px;" width="30%">
+                </div>
+                <div class="centered-container"
+                    style="margin-right: 15px;  border-bottom: 2px solid #000; padding-bottom: 10px;">
+                    <img src="gso_gif/14.png" alt="Description of GIF" width="50%">
+                </div>
+
+                <div class="centered-container" style="margin-right: 15px;">
+                    <img src="gso_gif/15_1.gif" alt="Description of GIF" style="margin: 30px;" width="30%">
+                    <img src="gso_gif/15_2.gif" alt="Description of GIF" style="margin: 30px;" width="30%">
+                    <img src="gso_gif/15_4.gif" alt="Description of GIF" style="margin: 30px;" width="30%">
+                </div>
+                <div class="centered-container"
+                    style="margin-right: 15px;  border-bottom: 2px solid #000; padding-bottom: 10px;">
+                    <img src="gso_gif/15.png" alt="Description of GIF" width="50%">
+                </div>
+
+                <div class="centered-container" style="margin-right: 15px;">
+                    <img src="gso_gif/16_1.gif" alt="Description of GIF" style="margin: 30px;" width="30%">
+                    <img src="gso_gif/16_2.gif" alt="Description of GIF" style="margin: 30px;" width="30%">
+                    <img src="gso_gif/16_4.gif" alt="Description of GIF" style="margin: 30px;" width="30%">
+                </div>
+                <div class="centered-container"
+                    style="margin-right: 15px;  border-bottom: 2px solid #000; padding-bottom: 10px;">
+                    <img src="gso_gif/16.png" alt="Description of GIF" width="50%">
+                </div>
+
+                <div class="centered-container" style="margin-right: 15px;">
+                    <img src="gso_gif/17_1.gif" alt="Description of GIF" style="margin: 30px;" width="30%">
+                    <img src="gso_gif/17_2.gif" alt="Description of GIF" style="margin: 30px;" width="30%">
+                    <img src="gso_gif/17_4.gif" alt="Description of GIF" style="margin: 30px;" width="30%">
+                </div>
+                <div class="centered-container"
+                    style="margin-right: 15px;  border-bottom: 2px solid #000; padding-bottom: 10px;">
+                    <img src="gso_gif/17.png" alt="Description of GIF" width="50%">
+                </div>
+
+                <div class="centered-container" style="margin-right: 15px;">
+                    <img src="gso_gif/18_1.gif" alt="Description of GIF" style="margin: 30px;" width="30%">
+                    <img src="gso_gif/18_2.gif" alt="Description of GIF" style="margin: 30px;" width="30%">
+                    <img src="gso_gif/18_4.gif" alt="Description of GIF" style="margin: 30px;" width="30%">
+                </div>
+                <div class="centered-container"
+                    style="margin-right: 15px;  border-bottom: 2px solid #000; padding-bottom: 10px;">
+                    <img src="gso_gif/18.png" alt="Description of GIF" width="50%">
+                </div>
+
+                <div class="centered-container" style="margin-right: 15px;">
+                    <img src="gso_gif/19_1.gif" alt="Description of GIF" style="margin: 30px;" width="30%">
+                    <img src="gso_gif/19_2.gif" alt="Description of GIF" style="margin: 30px;" width="30%">
+                    <img src="gso_gif/19_4.gif" alt="Description of GIF" style="margin: 30px;" width="30%">
+                </div>
+                <div class="centered-container"
+                    style="margin-right: 15px;  border-bottom: 2px solid #000; padding-bottom: 10px;">
+                    <img src="gso_gif/19.png" alt="Description of GIF" width="50%">
+                </div>
+
+                <div class="centered-container" style="margin-right: 15px;">
+                    <img src="gso_gif/20_1.gif" alt="Description of GIF" style="margin: 30px;" width="30%">
+                    <img src="gso_gif/20_2.gif" alt="Description of GIF" style="margin: 30px;" width="30%">
+                    <img src="gso_gif/20_4.gif" alt="Description of GIF" style="margin: 30px;" width="30%">
+                </div>
+                <div class="centered-container"
+                    style="margin-right: 15px;  border-bottom: 2px solid #000; padding-bottom: 10px;">
+                    <img src="gso_gif/20.png" alt="Description of GIF" width="50%">
+                </div>
+            </div>
+
+            <div class="col-sm-4 my-auto center" style="margin-left:auto; margin-right: auto;">
+                <a href="index.html" class="btn btn-primary btn-lg">
+                    HomePage
+                </a>
+            </div>
+
+            <div class="col-sm-4 my-auto center" style="margin-left:auto; margin-right: auto;">
+                <a href="s_gallery_-1.html" class="btn btn-primary btn-lg disabled">
+                    Previous Page
+                </a>
+            </div>
+            <div class="col-sm-4 my-auto center" style="margin-left:auto; margin-right: auto;">
+                <a href="s_gallery_1.html" class="btn btn-primary btn-lg btn-search">>
+                    Next Page
+                </a>
+            </div>
+
+        </div>
+    </div>
+    </div>
+    </div>
+</section>
+<br>
+
+
+</body>
+
+</html>
