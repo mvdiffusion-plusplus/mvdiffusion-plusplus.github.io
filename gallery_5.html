@@ -53,6 +53,25 @@
             /* Adjust the value as needed */
         }
     </style>
+    <style>
+        .custom-btn {
+            padding: 5px 10px; /* Adjust padding to control the button's height and width */
+            font-size: 16px; /* Adjust font size to make text smaller */
+            margin: 0 20px; /* Adjust margin if needed */
+            /* Optionally set a fixed width if you want all buttons to be the same width */
+            width: auto; /* or you can use a specific value like '150px' */
+            text-align: center;
+        }
+
+        /* This applies only if you want the first and last button to have lesser margin at the extremes */
+        .custom-btn:first-child {
+            margin-left: 0;
+        }
+
+        .custom-btn:last-child {
+            margin-right: 0;
+        }
+    </style>
 </head>
 
 <!-- cover -->
