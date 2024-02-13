@@ -107,46 +107,26 @@
         <video width="80%" playsinline="" autoplay="autoplay" loop="loop" preload="" muted="">
           <source src="video/demo.mp4" type="video/mp4">
         </video>
-        <h6 style="color:#8899a5"> MVDiffusion++ is able to generate <span style='color: #e04c1f;'>dense</span>, <span
-            style='color: #e04c1f;'>high-resolution</span> images conditioned on <span style='color: #1f46e0;'>single or
-            multiple unposed</span> images</h6>
 
-        <div class="centered-container">
-          <table width="90%">
-            <tr>
-              <td width="30%"><b>Input image</b> </td>
-              <td width="30%"><b>Generated images</b></td>
-              <td width="30%"><b>Textured mesh</b></td>
-            </tr>
-          </table>
-        </div>
 
-        <div class="centered-container">
-          <img src="gif/0.gif" alt="Description of GIF" width="90%">
-        </div>
-        <div class="centered-container">
-          <img src="gif/1.gif" alt="Description of GIF" width="90%">
-        </div>
-        <div class="centered-container">
-          <img src="gif/2.gif" alt="Description of GIF" width="90%">
-        </div>
+        <h3>Abstract</h3>
+        <p class="text-left">
+          This paper presents a neural architecture MVDiffusion++ for 3D object reconstruction that synthesizes dense
+          and high-resolution views of an object given one or a few images without camera poses.
+          MVDiffusion++ achieves superior flexibility and scalability with two surprisingly simple ideas: 1) A
+          ``pose-free
+          architecture'' where standard self-attention among 2D latent features learns 3D consistency across an
+          arbitrary number of conditional and generation views without explicitly using camera pose information; and 2)
+          A ``view dropout strategy'' that discards a substantial number of output views during training,
+          which reduces the training-time memory footprint and enables dense and high-resolution view synthesis at test
+          time. We use the Objaverse for training and the Google Scanned Objects for evaluation with standard novel view
+          synthesis and 3D reconstruction metrics, where MVDiffusion++ significantly outperforms the current state of
+          the
+          arts. We also demonstrate a text-to-3D application example by combining MVDiffusion++ with a text-to-image
+          generative model.
+        </p>
       </div>
     </div>
-
-
-    <h3>Abstract</h3>
-    <p class="text-left">
-      This paper presents a neural architecture MVDiffusion++ for sparse-view 3D object reconstruction that synthesizes
-      dense and high-resolution views of an object given one or a few images without camera poses as a condition. Two
-      simple ideas are at the heart of MVDiffusion++: 1) A "pose-free architecture" where standard self-attention among
-      2D latent features learns 3D consistency across conditional and generation views without explicitly using camera
-      pose information; and 2) A view-level uniform dropout that drops a consistent set of views across layers, enabling
-      us to reduce the training-time memory footprint and achieve dense and high-resolution view synthesis. We use
-      Objaverse dataset for training and Google scanned object dataset for evaluation with standard novel view synthesis
-      and 3D reconstruction metrics, where MVDiffusion++ makes a significant boost over the current state-of-the-art.
-    </p>
-  </div>
-  </div>
   </div>
 </section>
 <br>
@@ -154,49 +134,62 @@
 
 <section>
   <div class="container">
-    <div class="row">
-      <div class="col-12 text-center">
-        <h2>Single view reconstruction</h2>
-        <hr style="margin-top:0px">
-        <div class="centered-container">
-          <table width="90%">
-            <tr>
-              <td width="30%"><b>Input image</b> </td>
-              <td width="30%"><b>Generated images</b></td>
-              <td width="30%"><b>Textured mesh</b></td>
-            </tr>
-          </table>
-        </div>
-        <div class="centered-container">
-          <img src="gif/3.gif" alt="Description of GIF" width="90%">
-        </div>
-        <div class="centered-container">
-          <img src="gif/4.gif" alt="Description of GIF" width="90%">
-        </div>
-        <div class="centered-container">
-          <img src="gif/5.gif" alt="Description of GIF" width="90%">
-        </div>
-        <div class="centered-container">
-          <img src="gif/6.gif" alt="Description of GIF" width="90%">
-        </div>
-        <div class="centered-container">
-          <img src="gif/7.gif" alt="Description of GIF" width="90%">
-        </div>
-        <div class="centered-container">
-          <img src="gif/8.gif" alt="Description of GIF" width="90%">
-        </div>
-        <div class="centered-container">
-          <img src="gif/9.gif" alt="Description of GIF" width="90%">
-        </div>
-        <br>
-        <div class="col-sm-4 my-auto center" style="margin-left:auto; margin-right: auto;">
-          <a href="./gallery_0.html" class="btn btn-primary btn-lg btn-search">
-            More examples
-          </a>
-        </div>
-        </p>
-      </div>
+
+    <h2>Single view reconstruction</h2>
+    <hr style="margin-top:0px">
+    <h6 style="color:#8899a5"> MVDiffusion++ is able to generate <span style='color: #e04c1f;'>dense</span>, <span
+        style='color: #e04c1f;'>high-resolution</span> images conditioned on <span style='color: #1f46e0;'>single or
+        multiple unposed</span> images</h6>
+
+    <div class="centered-container">
+      <table width="90%">
+        <tr>
+          <td width="30%"><b>Input image</b> </td>
+          <td width="30%"><b>Generated images</b></td>
+          <td width="30%"><b>Textured mesh</b></td>
+        </tr>
+      </table>
     </div>
+
+    <div class="centered-container">
+      <img src="gif/0.gif" alt="Description of GIF" width="90%">
+    </div>
+    <div class="centered-container">
+      <img src="gif/1.gif" alt="Description of GIF" width="90%">
+    </div>
+    <div class="centered-container">
+      <img src="gif/2.gif" alt="Description of GIF" width="90%">
+    </div>
+    <div class="centered-container">
+      <img src="gif/3.gif" alt="Description of GIF" width="90%">
+    </div>
+    <div class="centered-container">
+      <img src="gif/4.gif" alt="Description of GIF" width="90%">
+    </div>
+    <div class="centered-container">
+      <img src="gif/5.gif" alt="Description of GIF" width="90%">
+    </div>
+    <div class="centered-container">
+      <img src="gif/6.gif" alt="Description of GIF" width="90%">
+    </div>
+    <div class="centered-container">
+      <img src="gif/7.gif" alt="Description of GIF" width="90%">
+    </div>
+    <div class="centered-container">
+      <img src="gif/8.gif" alt="Description of GIF" width="90%">
+    </div>
+    <div class="centered-container">
+      <img src="gif/9.gif" alt="Description of GIF" width="90%">
+    </div>
+    <br>
+    <div class="col-sm-4 my-auto center" style="margin-left:auto; margin-right: auto;">
+      <a href="./gallery_0.html" class="btn btn-primary btn-lg btn-search">
+        More examples
+      </a>
+    </div>
+    </p>
+  </div>
+  </div>
   </div>
 </section>
 <br>
