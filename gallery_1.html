@@ -53,6 +53,25 @@
             /* Adjust the value as needed */
         }
     </style>
+    <style>
+        .custom-btn {
+            padding: 5px 10px; /* Adjust padding to control the button's height and width */
+            font-size: 16px; /* Adjust font size to make text smaller */
+            margin: 0 20px; /* Adjust margin if needed */
+            /* Optionally set a fixed width if you want all buttons to be the same width */
+            width: auto; /* or you can use a specific value like '150px' */
+            text-align: center;
+        }
+
+        /* This applies only if you want the first and last button to have lesser margin at the extremes */
+        .custom-btn:first-child {
+            margin-left: 0;
+        }
+
+        .custom-btn:last-child {
+            margin-right: 0;
+        }
+    </style>   
 </head>
 
 <!-- cover -->
@@ -117,67 +136,60 @@
                 <h6 style="color:#8899a5"> MVDiffusion++ is able to generate dense, high-resolution images conditioned
                     on a
                     single or multiple unposed images</h6>
-                <table>
+                
+                <div class="centered-container">
+                  <table width="90%">
                     <tr>
-                        <td>
-                            <div class="margin-input">Input</div>
-                        </td>
-                        <td>
-                            <div class="margin-gen">Multi-view generation</div>
-                        </td>
-                        <td>
-                            <div class="margin-mesh">Textured mesh</div>
-                        </td>
+                      <td width="30%"><b>Input image</b> </td>
+                      <td width="30%"><b>Generated images</b></td>
+                      <td width="30%"><b>Textured mesh</b></td>
                     </tr>
-                </table>
+                  </table>
+                </div>
+
                 <div class="centered-container">
-                    <img src="gif/20.gif" alt="Description of GIF" style="width: 1200px; height: 400px;">
+                    <img src="gif/20.gif" alt="Description of GIF" width="90%">
                 </div>
                 <div class="centered-container">
-                    <img src="gif/21.gif" alt="Description of GIF" style="width: 1200px; height: 400px;">
+                    <img src="gif/21.gif" alt="Description of GIF" width="90%">
                 </div>
                 <div class="centered-container">
-                    <img src="gif/22.gif" alt="Description of GIF" style="width: 1200px; height: 400px;">
+                    <img src="gif/22.gif" alt="Description of GIF" width="90%">
                 </div>
                 <div class="centered-container">
-                    <img src="gif/23.gif" alt="Description of GIF" style="width: 1200px; height: 400px;">
+                    <img src="gif/23.gif" alt="Description of GIF" width="90%">
                 </div>
                 <div class="centered-container">
-                    <img src="gif/24.gif" alt="Description of GIF" style="width: 1200px; height: 400px;">
+                    <img src="gif/24.gif" alt="Description of GIF" width="90%">
                 </div>
                 <div class="centered-container">
-                    <img src="gif/25.gif" alt="Description of GIF" style="width: 1200px; height: 400px;">
+                    <img src="gif/25.gif" alt="Description of GIF" width="90%">
                 </div>
                 <div class="centered-container">
-                    <img src="gif/26.gif" alt="Description of GIF" style="width: 1200px; height: 400px;">
+                    <img src="gif/26.gif" alt="Description of GIF" width="90%">
                 </div>
                 <div class="centered-container">
-                    <img src="gif/27.gif" alt="Description of GIF" style="width: 1200px; height: 400px;">
+                    <img src="gif/27.gif" alt="Description of GIF" width="90%">
                 </div>
                 <div class="centered-container">
-                    <img src="gif/28.gif" alt="Description of GIF" style="width: 1200px; height: 400px;">
+                    <img src="gif/28.gif" alt="Description of GIF" width="90%">
                 </div>
                 <div class="centered-container">
-                    <img src="gif/29.gif" alt="Description of GIF" style="width: 1200px; height: 400px;">
+                    <img src="gif/29.gif" alt="Description of GIF" width="90%">
                 </div>
             </div>
 
-            <div class="col-sm-4 my-auto center" style="margin-left:auto; margin-right: auto;">
-                <a href="index.html" class="btn btn-primary btn-lg">
-                    HomePage
-                </a>
-            </div>
-
-            <div class="col-sm-4 my-auto center" style="margin-left:auto; margin-right: auto;">
-                <a href="gallery_0.html" class="btn btn-primary btn-lg">
-                    Previous Page
-                </a>
-            </div>
-            <div class="col-sm-4 my-auto center" style="margin-left:auto; margin-right: auto;">
-                <a href="gallery_2.html" class="btn btn-primary btn-lg btn-search">>
-                    Next Page
-                </a>
-            </div>
+            <div class="centered-container" style="display: flex; justify-content: center;">
+                    <a href="index.html" class="btn btn-primary btn-lg custom-btn">
+                        HomePage
+                    </a>
+                    <a href="gallery_0.html" class="btn btn-primary btn-lg disabled custom-btn">
+                        Previous Page
+                    </a>
+                    <a href="gallery_2.html" class="btn btn-primary btn-lg btn-search custom-btn">
+                        Next Page
+                    </a>
+            </div>  
 
         </div>
     </div>
