@@ -156,7 +156,7 @@ li.grid
 
 .custom-btn {
     flex-grow: 1; /* Allow buttons to grow and fill the container */
-    margin: 0 10px; /* Add horizontal margin for spacing between buttons */
+    margin: 0 3px; /* Add horizontal margin for spacing between buttons */
     text-align: center; /* Center the text inside the button */
 }
 

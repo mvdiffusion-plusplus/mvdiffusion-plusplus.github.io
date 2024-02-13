@@ -53,6 +53,22 @@
             /* Adjust the value as needed */
         }
     </style>
+    <style>
+        .custom-btn {
+            flex-grow: 1; /* Allow buttons to grow and fill the container */
+            margin: 0 10px; /* Add horizontal margin for spacing between buttons */
+            text-align: center; /* Center the text inside the button */
+        }
+
+        /* This applies only if you want the first and last button to have lesser margin at the extremes */
+        .custom-btn:first-child {
+            margin-left: 0;
+        }
+
+        .custom-btn:last-child {
+            margin-right: 0;
+}
+    </style>>    
 </head>
 
 <!-- cover -->
@@ -159,7 +175,7 @@
                 </div>
                 <br><br>
 
-                <div class="centered-container" style="display: flex; justify-content: space-between;">
+                <div class="centered-container" style="display: flex; justify-content: center;">
                     <a href="index.html" class="btn btn-primary btn-lg custom-btn">
                         HomePage
                     </a>
