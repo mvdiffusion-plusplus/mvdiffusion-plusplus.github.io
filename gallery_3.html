@@ -53,6 +53,25 @@
             /* Adjust the value as needed */
         }
     </style>
+    <style>
+        .custom-btn {
+            padding: 5px 10px; /* Adjust padding to control the button's height and width */
+            font-size: 16px; /* Adjust font size to make text smaller */
+            margin: 0 20px; /* Adjust margin if needed */
+            /* Optionally set a fixed width if you want all buttons to be the same width */
+            width: auto; /* or you can use a specific value like '150px' */
+            text-align: center;
+        }
+
+        /* This applies only if you want the first and last button to have lesser margin at the extremes */
+        .custom-btn:first-child {
+            margin-left: 0;
+        }
+
+        .custom-btn:last-child {
+            margin-right: 0;
+        }
+    </style>
 </head>
 
 <!-- cover -->
@@ -131,52 +150,47 @@
                     </tr>
                 </table>
                 <div class="centered-container">
-                    <img src="gif/40.gif" alt="Description of GIF" style="width: 1200px; height: 400px;">
+                    <img src="gif/40.gif" alt="Description of GIF" width="90%">
                 </div>
                 <div class="centered-container">
-                    <img src="gif/41.gif" alt="Description of GIF" style="width: 1200px; height: 400px;">
+                    <img src="gif/41.gif" alt="Description of GIF" width="90%">
                 </div>
                 <div class="centered-container">
-                    <img src="gif/42.gif" alt="Description of GIF" style="width: 1200px; height: 400px;">
+                    <img src="gif/42.gif" alt="Description of GIF" width="90%">
                 </div>
                 <div class="centered-container">
-                    <img src="gif/43.gif" alt="Description of GIF" style="width: 1200px; height: 400px;">
+                    <img src="gif/43.gif" alt="Description of GIF" width="90%">
                 </div>
                 <div class="centered-container">
-                    <img src="gif/44.gif" alt="Description of GIF" style="width: 1200px; height: 400px;">
+                    <img src="gif/44.gif" alt="Description of GIF" width="90%">
                 </div>
                 <div class="centered-container">
-                    <img src="gif/45.gif" alt="Description of GIF" style="width: 1200px; height: 400px;">
+                    <img src="gif/45.gif" alt="Description of GIF" width="90%">
                 </div>
                 <div class="centered-container">
-                    <img src="gif/46.gif" alt="Description of GIF" style="width: 1200px; height: 400px;">
+                    <img src="gif/46.gif" alt="Description of GIF" width="90%">
                 </div>
                 <div class="centered-container">
-                    <img src="gif/47.gif" alt="Description of GIF" style="width: 1200px; height: 400px;">
+                    <img src="gif/47.gif" alt="Description of GIF" width="90%">
                 </div>
                 <div class="centered-container">
-                    <img src="gif/48.gif" alt="Description of GIF" style="width: 1200px; height: 400px;">
+                    <img src="gif/48.gif" alt="Description of GIF" width="90%">
                 </div>
                 <div class="centered-container">
-                    <img src="gif/49.gif" alt="Description of GIF" style="width: 1200px; height: 400px;">
+                    <img src="gif/49.gif" alt="Description of GIF" width="90%">
                 </div>
             </div>
 
-            <div class="col-sm-4 my-auto center" style="margin-left:auto; margin-right: auto;">
-                <a href="index.html" class="btn btn-primary btn-lg">
-                    HomePage
-                </a>
-            </div>
-
-            <div class="col-sm-4 my-auto center" style="margin-left:auto; margin-right: auto;">
-                <a href="gallery_2.html" class="btn btn-primary btn-lg">
-                    Previous Page
-                </a>
-            </div>
-            <div class="col-sm-4 my-auto center" style="margin-left:auto; margin-right: auto;">
-                <a href="gallery_4.html" class="btn btn-primary btn-lg btn-search">>
-                    Next Page
-                </a>
+            <div class="centered-container" style="display: flex; justify-content: center;">
+                    <a href="index.html" class="btn btn-primary btn-lg custom-btn">
+                        HomePage
+                    </a>
+                    <a href="gallery_2.html" class="btn btn-primary btn-lg disabled custom-btn">
+                        Previous Page
+                    </a>
+                    <a href="gallery_4.html" class="btn btn-primary btn-lg btn-search custom-btn">
+                        Next Page
+                    </a>
             </div>
 
         </div>
