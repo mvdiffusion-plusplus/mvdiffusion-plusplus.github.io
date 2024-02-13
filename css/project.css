@@ -151,3 +151,20 @@ li.grid
     border: 1px solid #eee;
     box-shadow: 0px 0px 2px #444444;
 }
+
+
+
+.custom-btn {
+    flex-grow: 1; /* Allow buttons to grow and fill the container */
+    margin: 0 10px; /* Add horizontal margin for spacing between buttons */
+    text-align: center; /* Center the text inside the button */
+}
+
+/* This applies only if you want the first and last button to have lesser margin at the extremes */
+.custom-btn:first-child {
+    margin-left: 0;
+}
+
+.custom-btn:last-child {
+    margin-right: 0;
+}
