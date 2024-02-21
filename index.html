@@ -25,23 +25,11 @@
     }
   </style>
   <style>
-    .video-responsive {
-      overflow: hidden;
-      padding-top: 56.25%; /* 16:9 aspect ratio */
-      position: relative;
-      height: 0;
-    }
-  </style>
-  <style>
-    .video-responsive iframe {
-      border: 0;
-      height: 100%;
-      left: 0;
-      position: absolute;
-      top: 0;
+    .youtube-video {
+      aspect-ratio: 16 / 9;
       width: 100%;
     }
-  </style>
+  </style>>
   <!-- <style>
     .margin-input {
       margin-right: 300px;
@@ -117,9 +105,8 @@
   <div class="container">
     <div class="row">
 
-      <div class="video-responsive">
-        <iframe width="80%" src="https://www.youtube.com/embed/GaLhHXsjKAA?si=mj5tHzCsVzJgsrxJ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen>
-        </iframe>
+      <div class="col-12 text-center">
+        <iframe class="youtube-video" src="https://www.youtube.com/embed/GaLhHXsjKAA?si=mj5tHzCsVzJgsrxJ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
       </div>
 
       <div class="col-12 text-center">
